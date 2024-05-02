@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Midpoint Integration!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <h1 class="site-title">
+          <a href="index.html">Handy-Dandy Numerical Integration Calculator!</a>
+        </h1>
+        <ul class="method-links">
+          <li><a href="midpoint.html">Midpoint Rule</a></li>
+          <li><a href="trapz.html">Trapezoid Rule</a></li>
+          <li><a href="simps.html">Simpson's Rule</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="form-container">
+      <form id="mpint" class="user-inputs">
+
+        <h1>Midpoint Integration!</h1>
+        
+        <label for="user-func">Function Equation:</label>
+        <input
+          name="userEquation"
+          id="user-eq"
+          placeholder="sqrt(sin(x)+5x^2)"
+          required
+        />
+
+
+        <label for="lower-limit">Lower Limit:</label>
+        <input
+          type="number"
+          name="lowerLimit"
+          id="lower-limit"
+          placeholder="Lower Limit = 69"
+          required
+        />
+
+        <label for="upper-limit">Upper Limit:</label>
+        <input
+          type="number"
+          name="upperLimit"
+          id="upper-limit"
+          placeholder="Upper Limit = 420"
+          required
+        />
+
+        <label for="subintervals"
+          >Number of Subintervals:</label
+        >
+        <input
+          type="number"
+          name="subIntervals"
+          id="subintervals"
+          placeholder="Subintervals: 8"
+          required
+        />
+
+        <input class="form-button" type="submit" value="Integrate!">
+
+        <h1 id="integrated-value">Answer: </h1>
+      </form>
+    </div>
+    <footer>
+      <div class="footer-links">
+        <p>Created by <a href="https://www.linkedin.com/in/declanblanc/">Declan Blanchard</a></p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.4.0/math.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
